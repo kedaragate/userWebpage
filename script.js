@@ -136,31 +136,32 @@ modeButton.addEventListener("click", switchMode);
 
 //user modal
 
-// const userDetails = function () {
-//   const buttonsList = document.querySelectorAll(".card-btn");
-//   // const buttons = Array.from(buttonsList);
-//   buttonsList.forEach((btn) => {
-//     btn.addEventListener("click", function () {
-//       fetch(`https://dummyapi.io/data/v1/user/:${this.id}`, {
-//         method: "GET",
-//         headers: {
-//           "app-id": "62c3859db3b09459b4b1f8a0",
-//         },
-//       }).then((response) => {
-//         let my = response.json();
-//         console.log(my);
-//       });
-//     });
-//     console.log(this.id);
-//     return this.id;
-//   });
-// };
 const userDetails = function () {
-  const buttonsList = document.getElementsByClassName("card-btn");
-  // console.log(buttonsList);
-  for (let i = 0; i < buttonsList.length; i++) {
-    buttonsList[i].addEventListener("click", function () {
+  const buttonsList = document.querySelectorAll(".card-btn");
+  // const buttons = Array.from(buttonsList);
+  buttonsList.forEach((btn) => {
+    btn.addEventListener("click", function () {
       console.log(this.id);
+      fetch(`https://dummyapi.io/data/v1/user/${this.id}`, {
+        method: "GET",
+        headers: {
+          "app-id": "62c3859db3b09459b4b1f8a0",
+        },
+      })
+        .then((response) => response.json())
+        .then((data) => console.log(data));
     });
-  }
+
+    return this.id;
+  });
 };
+
+// const userDetails = function () {
+//   const buttonsList = document.getElementsByClassName("card-btn");
+//   // console.log(buttonsList);
+//   for (let i = 0; i < buttonsList.length; i++) {
+//     buttonsList[i].addEventListener("click", function () {
+//       console.log(this.id);
+//     });
+//   }
+// };
