@@ -13,6 +13,8 @@
   padding: 20px;
   justify-content: center;
   position: relative;
+  /* background-color: rgba(0, 0, 0, 0.6);
+  backdrop-filter: blur(3px); */
 }
 
 .card {
@@ -86,10 +88,10 @@
 .userModal {
   position: absolute;
   background-color: white;
-  border: 2px solid red;
+  /* border: 2px solid red; */
 
-  width: 60%;
-  height: 90%;
+  width: 40%;
+  height: 30%;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
@@ -107,4 +109,31 @@
   top: 0%;
   border: none;
   font-weight: bold;
+  width: 2em;
+  height: 2em;
+}
+
+.userModal .userDetails {
+  display: flex;
+
+  height: 100%;
+  /* border: 2px solid green; */
+  width: 100%;
+  border: 1px solid grey;
+}
+.userModal .userDetails .userImg {
+  height: 100%;
+  width: 40%;
+
+  /* border: 2px solid blue; */
+}
+.userModal .userDetails img {
+  height: 100%;
+
+  /* border: 2px solid blue; */
+}
+.userModal .userDetails .userPersonalInfo {
+  width: 60%;
+  /* border: 2px solid blue; */
+  line-height: 35px;
 }

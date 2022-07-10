@@ -135,6 +135,7 @@ modeButton.addEventListener("click", switchMode);
 */
 
 //user modal
+const userInfo = document.querySelector(".userDetails");
 
 const userDetails = function () {
   const buttonsList = document.querySelectorAll(".card-btn");
@@ -149,7 +150,11 @@ const userDetails = function () {
         },
       })
         .then((response) => response.json())
-        .then((data) => console.log(data));
+        .then((data) => {
+          console.log(data);
+
+          console.log(userInfo);
+        });
     });
 
     return this.id;
@@ -165,3 +170,5 @@ const userDetails = function () {
 //     });
 //   }
 // };
+
+//Creating user modal elements
