@@ -172,3 +172,49 @@ const userDetails = function () {
 // };
 
 //Creating user modal elements
+/* <div class="userModal">
+<button class="modalCloseBtn">X</button>
+<div class="userDetails">
+  <div class="userImg">
+    <img src="https://randomuser.me/api/portraits/women/58.jpg" />
+  </div>
+  <div class="userPersonalInfo">
+    <p>Name:ms Sara Andersen</p>
+    <p>Gender:Female</p>
+    <p>Phone:92694011</p>
+    <p>Email:sara.andersen@example.com</p>
+    <p>Location:Kongsvinger,Nordjylland,Denmark.</p>
+  </div>
+</div>
+</div> */
+
+const userModal = document.querySelector(".userModal");
+const createUserModal = function (user) {
+  const modalCloseBtn = document.createElement("button");
+  modalCloseBtn.className = "modalCloseBtn";
+  userModal.appendChild(modalCloseBtn);
+  const userModalSubDiv = document.createElement("div");
+  userModalSubDiv.className = "userDetails";
+  userModal.appendChild(userModalSubDiv);
+
+  const userModalImg = document.createElement("img");
+  userModalImg.className = "userImg";
+  userModalSubDiv.appendChild(userModalImg);
+  userModalImg.setAttribute("src", user.picture);
+  const userPersonalInfo = document.createElement("div");
+  userPersonalInfo.className = "userPersonalInfo";
+  userModalSubDiv.appendChild(userPersonalInfo);
+  const userName = document.createElement("p");
+
+  userName.textContent = `${user.title} ${user.firstName} ${user.lastName}`;
+  const userGender = document.createElement("p");
+  userGender.textContent = user.gender;
+  const userPhone = document.createElement("p");
+  userPhone.textContent = user.phone;
+  const userEmail = document.createElement("p");
+  userEmail.textContent = user.email;
+  userPersonalInfo.appendChild(userName);
+  userPersonalInfo.appendChild(userGender);
+  userPersonalInfo.appendChild(userPhone);
+  userPersonalInfo.appendChild(userEmail);
+};
