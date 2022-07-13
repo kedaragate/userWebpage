@@ -154,6 +154,7 @@ const userDetails = function () {
           console.log(data);
 
           console.log(userInfo);
+createUserModal(data)
         });
     });
 
@@ -189,7 +190,7 @@ const userDetails = function () {
 </div> */
 
 const userModal = document.querySelector(".userModal");
-const createUserModal = function (user) {
+const createUserModal = function (userData) {
   const modalCloseBtn = document.createElement("button");
   modalCloseBtn.className = "modalCloseBtn";
   userModal.appendChild(modalCloseBtn);
@@ -218,3 +219,4 @@ const createUserModal = function (user) {
   userPersonalInfo.appendChild(userPhone);
   userPersonalInfo.appendChild(userEmail);
 };
+
