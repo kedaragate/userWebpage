@@ -195,6 +195,7 @@ const userModal = document.querySelector(".userModal");
 const createUserModal = function (user) {
   const modalCloseBtn = document.createElement("button");
   modalCloseBtn.className = "modalCloseBtn";
+modalCloseBtn.textContent="X";
   userModal.appendChild(modalCloseBtn);
   const userModalSubDiv = document.createElement("div");
   userModalSubDiv.className = "userDetails";
