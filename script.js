@@ -225,7 +225,7 @@ userModal.classList.add="hideModal";
 };
 
 modalCloseBtn.addEventListener("click", function(){
-userModal.classList.remove="hideModal"
+userModal.classList.add="hideModal"
 
 })
 
