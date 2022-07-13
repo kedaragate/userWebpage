@@ -200,6 +200,7 @@ modalCloseBtn.textContent="X";
   const userModalSubDiv = document.createElement("div");
   userModalSubDiv.className = "userDetails";
   userModal.appendChild(userModalSubDiv);
+userModal.classList.add="hideModal";
 
   const userModalImg = document.createElement("img");
   userModalImg.className = "userImg";
