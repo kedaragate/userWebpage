@@ -155,7 +155,7 @@ const userDetails = function () {
 
           console.log(userInfo);
 createUserModal(data);
-userModal.style.display="";
+userModal.style.removeProperty("display");
         });
 
     });
@@ -224,7 +224,7 @@ modalCloseBtn.textContent="X";
 };
 
 modalCloseBtn.addEventListener("click", function(){
-userModal.style.display="none";
+userModal.style.removeProperty=display;
 
 })
 
