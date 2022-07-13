@@ -224,7 +224,7 @@ modalCloseBtn.textContent="X";
 };
 
 modalCloseBtn.addEventListener("click", function(){
-userModal.style.removeProperty=display;
+userModal.classList.remove="hideModal"
 
 })
 
