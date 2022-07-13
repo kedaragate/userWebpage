@@ -156,8 +156,9 @@ const userDetails = function () {
           console.log(userInfo);
 
         });
-    });
 createUserModal(data)
+    });
+
     return this.id;
   });
 };
