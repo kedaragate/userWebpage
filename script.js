@@ -154,10 +154,10 @@ const userDetails = function () {
           console.log(data);
 
           console.log(userInfo);
-createUserModal(data)
+
         });
     });
-
+createUserModal(data)
     return this.id;
   });
 };
