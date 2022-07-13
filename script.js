@@ -155,7 +155,7 @@ const userDetails = function () {
 
           console.log(userInfo);
 createUserModal(data);
-userModal.style.display=null;
+
         });
 
     });
