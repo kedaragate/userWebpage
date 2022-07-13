@@ -220,3 +220,8 @@ const createUserModal = function (user) {
   userPersonalInfo.appendChild(userEmail);
 };
 
+modalCloseBtn.addEventListener("click", function(){
+userModal.style.display="none";
+
+})
+
