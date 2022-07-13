@@ -200,7 +200,7 @@ modalCloseBtn.textContent="X";
   const userModalSubDiv = document.createElement("div");
   userModalSubDiv.className = "userDetails";
   userModal.appendChild(userModalSubDiv);
-userModal.classList.add="hideModal";
+userModal.classList.remove="hideModal";
 
   const userModalImg = document.createElement("img");
   userModalImg.className = "userImg";
@@ -225,7 +225,7 @@ userModal.classList.add="hideModal";
 };
 
 modalCloseBtn.addEventListener("click", function(){
-userModal.classList.add="hideModal"
+userModal.classList.add("hideModal")
 
 })
 
