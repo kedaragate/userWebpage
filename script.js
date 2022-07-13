@@ -190,7 +190,7 @@ createUserModal(data)
 </div> */
 
 const userModal = document.querySelector(".userModal");
-const createUserModal = function (userData) {
+const createUserModal = function (user) {
   const modalCloseBtn = document.createElement("button");
   modalCloseBtn.className = "modalCloseBtn";
   userModal.appendChild(modalCloseBtn);
