@@ -165,7 +165,7 @@ const createUserModal = function (user) {
   const userModalHtml = `<div class="userModal">
 <button class="modalCloseBtn">X</button>
 
-  ;
+  
 <div class="userDetails">
   <div class="userImg">
     <img src="${user.picture}" />
@@ -179,7 +179,7 @@ const createUserModal = function (user) {
   </div>
 </div>
 </div>`;
-  usersDiv.insertAdjacentElement("afterbegin", userModalHtml);
+  usersDiv.insertAdjacentHtml("afterbegin", userModalHtml);
 };
 // const userModal = document.querySelector(".userModal");
 // const createUserModal = function (user) {
