@@ -2,7 +2,7 @@ const usersDiv = document.querySelector(".cards");
 const card = document.querySelector(".card");
 const message = document.querySelector("#message");
 // let userButton = document.querySelectorAll(".card-btn");
-
+const mainSection=document.querySelectorAll(".main")
 let userData;
 
 fetch("https://dummyapi.io/data/v1/user", {
@@ -30,7 +30,7 @@ let hideMessage = function () {
 let displayCards = function (users) {
   users.forEach((user) => {
     const userCard = createUserCard(user);
-    usersDiv.appendChild(userCard);
+    usersDiv.appendChild(userCard); 
 
     /* usersDiv.style.display = "flex";*/
   });
@@ -154,14 +154,14 @@ const userDetails = function () {
           console.log(data);
 
           console.log(userInfo);
-          /*createUserModal(data);*/
+          createUserModal(data);
         });
     });
 
     return this.id;
   });
 };
-/*
+
 const createUserModal = function (user) {
   const userModalHtml = `<div class="userModal">
 <button class="modalCloseBtn">X</button>
@@ -180,7 +180,7 @@ const createUserModal = function (user) {
   </div>
 </div>
 </div>`;
- // usersDiv.insertAdjacentHTML("afterbegin", userModalHtml);
+  mainSection.insertAdjacentHTML("beforeend", userModalHtml);
 // const userModal = document.querySelector(".userModal");
 // const createUserModal = function (user) {
 //   const modalCloseBtn = document.createElement("button");
@@ -220,4 +220,4 @@ const createUserModal = function (user) {
 modalCloseBtn.addEventListener("click", function () {
   userModal.classList.add("hideModal");
 })
-*/
+
