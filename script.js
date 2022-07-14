@@ -179,7 +179,7 @@ const createUserModal = function (user) {
   </div>
 </div>
 </div>`;
-  usersDiv.insertAdjacentHTML("afterbegin", userModalHtml);
+ // usersDiv.insertAdjacentHTML("afterbegin", userModalHtml);
 // const userModal = document.querySelector(".userModal");
 // const createUserModal = function (user) {
 //   const modalCloseBtn = document.createElement("button");
