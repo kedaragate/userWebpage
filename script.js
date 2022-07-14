@@ -216,7 +216,7 @@ const createUserModal = function (user) {
 //   modalCloseBtn.addEventListener("click", function () {
 //     userModal.classList.add("hideModal");
 //   });
-// };
+};
 modalCloseBtn.addEventListener("click", function () {
   userModal.classList.add("hideModal");
 })
