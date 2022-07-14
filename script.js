@@ -175,7 +175,7 @@ const createUserModal = function (user) {
     <p>Gender:${user.gender}</p>
     <p>Phone:${user.phone}</p>
     <p>Email:${user.email}</p>
-    // <p>Location:Kongsvinger,Nordjylland,Denmark.</p>
+    <p>Location:Kongsvinger,Nordjylland,Denmark.</p>
   </div>
 </div>
 </div>`;
@@ -216,6 +216,6 @@ const createUserModal = function (user) {
 //     userModal.classList.add("hideModal");
 //   });
 // };
-${modalCloseBtn.addEventListener("click", function () {
+modalCloseBtn.addEventListener("click", function () {
   userModal.classList.add("hideModal");
-})}
+})
