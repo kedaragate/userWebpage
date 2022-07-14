@@ -9,7 +9,7 @@ fetch("https://dummyapi.io/data/v1/user", {
   method: "GET",
 
   headers: {
-    "app-id": "62c3859db3b09459b4b1f8a0",
+    "app-id": "62cfb1be39dcdcb090d3bb2f",
   },
 })
   .then((response) => response.json())
@@ -146,7 +146,7 @@ const userDetails = function () {
       fetch(`https://dummyapi.io/data/v1/user/${this.id}`, {
         method: "GET",
         headers: {
-          "app-id": "62c3859db3b09459b4b1f8a0",
+          "app-id": "62cfb1be39dcdcb090d3bb2f",
         },
       })
         .then((response) => response.json())
