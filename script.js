@@ -2,7 +2,7 @@ const usersDiv = document.querySelector(".cards");
 const card = document.querySelector(".card");
 const message = document.querySelector("#message");
 // let userButton = document.querySelectorAll(".card-btn");
-const mainSection=document.querySelectorAll(".main")
+const mainSection = document.querySelectorAll(".main");
 let userData;
 
 fetch("https://dummyapi.io/data/v1/user", {
@@ -18,6 +18,7 @@ fetch("https://dummyapi.io/data/v1/user", {
     // console.log(userData);
     hideMessage(message);
     displayCards(data.data);
+    // console.log(userData);
   })
   .then(() => {
     userDetails();
@@ -29,48 +30,22 @@ let hideMessage = function () {
 
 let displayCards = function (users) {
   users.forEach((user) => {
-    const userCard = createUserCard(user);
-    /*usersDiv.appendChild(userCard); */
-
-    /* usersDiv.style.display = "flex";*/
+    createUserCard(user);
   });
 };
 let createUserCard = function (user) {
-  /*let userDiv = document.createElement("div");
-  userDiv.className = "card";
-  userDiv.id = user.id;
-  let userImage = document.createElement("img");
-  userImage.className = "card-img";
-  userImage.setAttribute("src", user.picture);
-  userDiv.appendChild(userImage);
-  let userName = document.createElement("h4");
-  userName.className = "card-name";
-  userName.textContent = `${user.title} ${user.firstName} ${user.lastName}`;
-  userDiv.appendChild(userName);
-  let userButton = document.createElement("button");
-  userButton.className = "card-btn";
-  userButton.id = user.id;
-  userButton.textContent = "See More Details";
-
-  userDiv.appendChild(userButton);
-  // console.log(userButton);
-
-  // console.log(userButton);
-
-  return userDiv;
-};*/
-const userCardHtml=
-`<div class="card">
-  <img
-    src="${user.picture}"
-    alt=""
-    class="card-img"
+  const userCardHtml = `<div class="card">
+      <img
+      src="${user.picture}"
+      alt=""
+      class="card-img"
   />
-  <h4 class="card-name">${user.title} ${user.firstName} ${user.lastName}</h4>
-  <button class="card-btn">See More Details</button>
-</div>`
-usersDiv.insertAdjacentHTML("afterbegin",userCardHtml)
-
+      <h4 class="card-name">${user.title} ${user.firstName} ${user.lastName}</h4>
+      <button class="card-btn" id="${user.id}">See More Details</button>
+  </div>`;
+  usersDiv.insertAdjacentHTML("afterbegin", userCardHtml);
+  return userCardHtml;
+};
 
 // Search facility
 
@@ -137,50 +112,16 @@ modeButton.addEventListener("click", switchMode);
 
 //user modal
 
-// const userModal = document.querySelector(".userModal");
-// const createUserModal = function (user) {
-//   const modalCloseBtn = document.createElement("button");
-//   modalCloseBtn.className = "modalCloseBtn";
-
-//   modalCloseBtn.textContent = "X";
-//   userModal.appendChild(modalCloseBtn);
-//   const userModalSubDiv = document.createElement("div");
-//   userModalSubDiv.className = "userDetails";
-//   userModal.appendChild(userModalSubDiv);
-//   userModal.className = "hideModal";
-
-//   const userModalImg = document.createElement("img");
-//   userModalImg.className = "userImg";
-//   userModalSubDiv.appendChild(userModalImg);
-//   userModalImg.setAttribute("src", user.picture);
-//   const userPersonalInfo = document.createElement("div");
-//   userPersonalInfo.className = "userPersonalInfo";
-//   userModalSubDiv.appendChild(userPersonalInfo);
-//   const userName = document.createElement("p");
-
-//   userName.textContent = `${user.title} ${user.firstName} ${user.lastName}`;
-//   const userGender = document.createElement("p");
-//   userGender.textContent = user.gender;
-//   const userPhone = document.createElement("p");
-//   userPhone.textContent = user.phone;
-//   const userEmail = document.createElement("p");
-//   userEmail.textContent = user.email;
-//   userPersonalInfo.appendChild(userName);
-//   userPersonalInfo.appendChild(userGender);
-//   userPersonalInfo.appendChild(userPhone);
-//   userPersonalInfo.appendChild(userEmail);
-//   modalCloseBtn.addEventListener("click", function () {
-//     
-//   });
-//};
 const userInfo = document.querySelector(".userDetails");
 
 const userDetails = function () {
   const buttonsList = document.querySelectorAll(".card-btn");
   // const buttons = Array.from(buttonsList);
+  // console.log(buttonsList);
   buttonsList.forEach((btn) => {
     btn.addEventListener("click", function () {
-      console.log(this.id);
+      // console.log(btn);
+      // console.log(this.id);
       fetch(`https://dummyapi.io/data/v1/user/${this.id}`, {
         method: "GET",
         headers: {
@@ -190,20 +131,16 @@ const userDetails = function () {
         .then((response) => response.json())
         .then((data) => {
           console.log(data);
-
-          console.log(userInfo);
           createUserModal(data);
- userModal.classList.remove("hideModal")
-
         });
     });
-
-    return this.id;
   });
+
+  return this.id;
 };
 
 const createUserModal = function (user) {
-  const userModalHtml = `<div class="userModal hideModal">
+  const userModalHtml = `<div class="userModal">
 <button class="modalCloseBtn">X</button>
 
   
@@ -220,9 +157,13 @@ const createUserModal = function (user) {
   </div>
 </div>
 </div>`;
-  usersDiv.insertAdjacentHTML("afterend", userModalHtml);}
-const modalCloseBtn=document.querySelector(".modalCloseBtn")
+  // console.log(usersDiv);
+  usersDiv.insertAdjacentHTML("beforeend", userModalHtml);
+  console.log(usersDiv);
+};
+const modalCloseBtn = document.querySelector(".modalCloseBtn");
+const userModal = document.querySelector(".userModal");
+
 modalCloseBtn.addEventListener("click", function () {
   userModal.classList.add("hideModal");
-})
-
+});
