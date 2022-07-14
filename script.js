@@ -155,6 +155,8 @@ const userDetails = function () {
 
           console.log(userInfo);
           createUserModal(data);
+ userModal.classList.remove("hideModal")
+
         });
     });
 
@@ -163,7 +165,7 @@ const userDetails = function () {
 };
 
 const createUserModal = function (user) {
-  const userModalHtml = `<div class="userModal">
+  const userModalHtml = `<div class="userModal hideModal">
 <button class="modalCloseBtn">X</button>
 
   
@@ -214,7 +216,7 @@ const createUserModal = function (user) {
 //   userPersonalInfo.appendChild(userPhone);
 //   userPersonalInfo.appendChild(userEmail);
 //   modalCloseBtn.addEventListener("click", function () {
-//     userModal.classList.add("hideModal");
+//     
 //   });
 };
 const modalCloseBtn=document.querySelector(".modalCloseBtn")
