@@ -171,7 +171,7 @@ modeButton.addEventListener("click", switchMode);
 //   modalCloseBtn.addEventListener("click", function () {
 //     
 //   });
-};
+//};
 const userInfo = document.querySelector(".userDetails");
 
 const userDetails = function () {
@@ -219,7 +219,7 @@ const createUserModal = function (user) {
   </div>
 </div>
 </div>`;
-  usersDiv.insertAdjacentHTML("afterend", userModalHtml);
+  usersDiv.insertAdjacentHTML("afterend", userModalHtml);}
 const modalCloseBtn=document.querySelector(".modalCloseBtn")
 modalCloseBtn.addEventListener("click", function () {
   userModal.classList.add("hideModal");
