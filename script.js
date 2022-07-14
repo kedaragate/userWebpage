@@ -135,6 +135,43 @@ modeButton.addEventListener("click", switchMode);
 */
 
 //user modal
+
+// const userModal = document.querySelector(".userModal");
+// const createUserModal = function (user) {
+//   const modalCloseBtn = document.createElement("button");
+//   modalCloseBtn.className = "modalCloseBtn";
+
+//   modalCloseBtn.textContent = "X";
+//   userModal.appendChild(modalCloseBtn);
+//   const userModalSubDiv = document.createElement("div");
+//   userModalSubDiv.className = "userDetails";
+//   userModal.appendChild(userModalSubDiv);
+//   userModal.className = "hideModal";
+
+//   const userModalImg = document.createElement("img");
+//   userModalImg.className = "userImg";
+//   userModalSubDiv.appendChild(userModalImg);
+//   userModalImg.setAttribute("src", user.picture);
+//   const userPersonalInfo = document.createElement("div");
+//   userPersonalInfo.className = "userPersonalInfo";
+//   userModalSubDiv.appendChild(userPersonalInfo);
+//   const userName = document.createElement("p");
+
+//   userName.textContent = `${user.title} ${user.firstName} ${user.lastName}`;
+//   const userGender = document.createElement("p");
+//   userGender.textContent = user.gender;
+//   const userPhone = document.createElement("p");
+//   userPhone.textContent = user.phone;
+//   const userEmail = document.createElement("p");
+//   userEmail.textContent = user.email;
+//   userPersonalInfo.appendChild(userName);
+//   userPersonalInfo.appendChild(userGender);
+//   userPersonalInfo.appendChild(userPhone);
+//   userPersonalInfo.appendChild(userEmail);
+//   modalCloseBtn.addEventListener("click", function () {
+//     
+//   });
+};
 const userInfo = document.querySelector(".userDetails");
 
 const userDetails = function () {
@@ -183,42 +220,6 @@ const createUserModal = function (user) {
 </div>
 </div>`;
   usersDiv.insertAdjacentHTML("afterend", userModalHtml);
-// const userModal = document.querySelector(".userModal");
-// const createUserModal = function (user) {
-//   const modalCloseBtn = document.createElement("button");
-//   modalCloseBtn.className = "modalCloseBtn";
-
-//   modalCloseBtn.textContent = "X";
-//   userModal.appendChild(modalCloseBtn);
-//   const userModalSubDiv = document.createElement("div");
-//   userModalSubDiv.className = "userDetails";
-//   userModal.appendChild(userModalSubDiv);
-//   userModal.className = "hideModal";
-
-//   const userModalImg = document.createElement("img");
-//   userModalImg.className = "userImg";
-//   userModalSubDiv.appendChild(userModalImg);
-//   userModalImg.setAttribute("src", user.picture);
-//   const userPersonalInfo = document.createElement("div");
-//   userPersonalInfo.className = "userPersonalInfo";
-//   userModalSubDiv.appendChild(userPersonalInfo);
-//   const userName = document.createElement("p");
-
-//   userName.textContent = `${user.title} ${user.firstName} ${user.lastName}`;
-//   const userGender = document.createElement("p");
-//   userGender.textContent = user.gender;
-//   const userPhone = document.createElement("p");
-//   userPhone.textContent = user.phone;
-//   const userEmail = document.createElement("p");
-//   userEmail.textContent = user.email;
-//   userPersonalInfo.appendChild(userName);
-//   userPersonalInfo.appendChild(userGender);
-//   userPersonalInfo.appendChild(userPhone);
-//   userPersonalInfo.appendChild(userEmail);
-//   modalCloseBtn.addEventListener("click", function () {
-//     
-//   });
-};
 const modalCloseBtn=document.querySelector(".modalCloseBtn")
 modalCloseBtn.addEventListener("click", function () {
   userModal.classList.add("hideModal");
