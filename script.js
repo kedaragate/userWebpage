@@ -30,7 +30,7 @@ let hideMessage = function () {
 let displayCards = function (users) {
   users.forEach((user) => {
     const userCard = createUserCard(user);
-    usersDiv.appendChild(userCard); 
+    /*usersDiv.appendChild(userCard); */
 
     /* usersDiv.style.display = "flex";*/
   });
