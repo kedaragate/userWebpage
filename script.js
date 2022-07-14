@@ -180,7 +180,7 @@ const createUserModal = function (user) {
   </div>
 </div>
 </div>`;
-  mainSection.insertAdjacentHTML("beforeend", userModalHtml);
+  usersDiv.insertAdjacentHTML("afterend", userModalHtml);
 // const userModal = document.querySelector(".userModal");
 // const createUserModal = function (user) {
 //   const modalCloseBtn = document.createElement("button");
