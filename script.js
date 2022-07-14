@@ -164,9 +164,7 @@ const userDetails = function () {
 const createUserModal = function (user) {
   const userModalHtml = `<div class="userModal">
 <button class="modalCloseBtn">X</button>
-${modalCloseBtn.addEventListener("click", function () {
-  userModal.classList.add("hideModal");
-})}
+
   ;
 <div class="userDetails">
   <div class="userImg">
@@ -219,3 +217,6 @@ ${modalCloseBtn.addEventListener("click", function () {
 //     userModal.classList.add("hideModal");
 //   });
 // };
+${modalCloseBtn.addEventListener("click", function () {
+  userModal.classList.add("hideModal");
+})}
