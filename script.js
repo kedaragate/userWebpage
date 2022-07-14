@@ -36,7 +36,7 @@ let displayCards = function (users) {
   });
 };
 let createUserCard = function (user) {
-  let userDiv = document.createElement("div");
+  /*let userDiv = document.createElement("div");
   userDiv.className = "card";
   userDiv.id = user.id;
   let userImage = document.createElement("img");
@@ -58,18 +58,19 @@ let createUserCard = function (user) {
   // console.log(userButton);
 
   return userDiv;
-};
-
-/*<div class="card">
+};*/
+const userCardHtml=
+`<div class="card">
   <img
-    src="https://randomuser.me/api/portraits/women/58.jpg"
+    src="${user.picture}"
     alt=""
     class="card-img"
   />
-  <h4 class="card-name">ms Sara Anderson</h4>
+  <h4 class="card-name">${user.title} ${user.firstName} ${user.lastName}</h4>
   <button class="card-btn">See More Details</button>
-</div>;
-*/
+</div>`
+usersDiv.insertAdjacentHTML("afterbegin",userCardHtml)
+
 
 // Search facility
 
