@@ -154,78 +154,68 @@ const userDetails = function () {
           console.log(data);
 
           console.log(userInfo);
-createUserModal(data);
-
+          createUserModal(data);
         });
-
     });
 
     return this.id;
   });
 };
-
-// const userDetails = function () {
-//   const buttonsList = document.getElementsByClassName("card-btn");
-//   // console.log(buttonsList);
-//   for (let i = 0; i < buttonsList.length; i++) {
-//     buttonsList[i].addEventListener("click", function () {
-//       console.log(this.id);
-//     });
-//   }
-// };
-
-//Creating user modal elements
-/* <div class="userModal">
+const createUserModal = function (user) {
+  const userModalHtml = `<div class="userModal">
 <button class="modalCloseBtn">X</button>
+${modalCloseBtn.addEventListener("click", function () {
+  userModal.classList.add("hideModal");
+})}
+  ;
 <div class="userDetails">
   <div class="userImg">
-    <img src="https://randomuser.me/api/portraits/women/58.jpg" />
+    <img src="${user.picture}" />
   </div>
   <div class="userPersonalInfo">
-    <p>Name:ms Sara Andersen</p>
-    <p>Gender:Female</p>
-    <p>Phone:92694011</p>
-    <p>Email:sara.andersen@example.com</p>
-    <p>Location:Kongsvinger,Nordjylland,Denmark.</p>
+    <p>${user.title} ${user.firstName} ${user.lastName}</p>
+    <p>Gender:${user.gender}</p>
+    <p>Phone:${user.phone}</p>
+    <p>Email:${user.email}</p>
+    // <p>Location:Kongsvinger,Nordjylland,Denmark.</p>
   </div>
 </div>
-</div> */
-
-const userModal = document.querySelector(".userModal");
-const createUserModal = function (user) {
-  const modalCloseBtn = document.createElement("button");
-  modalCloseBtn.className = "modalCloseBtn";
-modalCloseBtn.textContent="X";
-  userModal.appendChild(modalCloseBtn);
-  const userModalSubDiv = document.createElement("div");
-  userModalSubDiv.className = "userDetails";
-  userModal.appendChild(userModalSubDiv);
-userModal.classList.toggle("hideModal");
-
-  const userModalImg = document.createElement("img");
-  userModalImg.className = "userImg";
-  userModalSubDiv.appendChild(userModalImg);
-  userModalImg.setAttribute("src", user.picture);
-  const userPersonalInfo = document.createElement("div");
-  userPersonalInfo.className = "userPersonalInfo";
-  userModalSubDiv.appendChild(userPersonalInfo);
-  const userName = document.createElement("p");
-
-  userName.textContent = `${user.title} ${user.firstName} ${user.lastName}`;
-  const userGender = document.createElement("p");
-  userGender.textContent = user.gender;
-  const userPhone = document.createElement("p");
-  userPhone.textContent = user.phone;
-  const userEmail = document.createElement("p");
-  userEmail.textContent = user.email;
-  userPersonalInfo.appendChild(userName);
-  userPersonalInfo.appendChild(userGender);
-  userPersonalInfo.appendChild(userPhone);
-  userPersonalInfo.appendChild(userEmail);
+</div>`;
+  usersDiv.insertAdjacentElement("afterbegin", userModalHtml);
 };
+// const userModal = document.querySelector(".userModal");
+// const createUserModal = function (user) {
+//   const modalCloseBtn = document.createElement("button");
+//   modalCloseBtn.className = "modalCloseBtn";
 
-modalCloseBtn.addEventListener("click", function(){
-userModal.classList.toggle("hideModal")
+//   modalCloseBtn.textContent = "X";
+//   userModal.appendChild(modalCloseBtn);
+//   const userModalSubDiv = document.createElement("div");
+//   userModalSubDiv.className = "userDetails";
+//   userModal.appendChild(userModalSubDiv);
+//   userModal.className = "hideModal";
 
-})
+//   const userModalImg = document.createElement("img");
+//   userModalImg.className = "userImg";
+//   userModalSubDiv.appendChild(userModalImg);
+//   userModalImg.setAttribute("src", user.picture);
+//   const userPersonalInfo = document.createElement("div");
+//   userPersonalInfo.className = "userPersonalInfo";
+//   userModalSubDiv.appendChild(userPersonalInfo);
+//   const userName = document.createElement("p");
 
+//   userName.textContent = `${user.title} ${user.firstName} ${user.lastName}`;
+//   const userGender = document.createElement("p");
+//   userGender.textContent = user.gender;
+//   const userPhone = document.createElement("p");
+//   userPhone.textContent = user.phone;
+//   const userEmail = document.createElement("p");
+//   userEmail.textContent = user.email;
+//   userPersonalInfo.appendChild(userName);
+//   userPersonalInfo.appendChild(userGender);
+//   userPersonalInfo.appendChild(userPhone);
+//   userPersonalInfo.appendChild(userEmail);
+//   modalCloseBtn.addEventListener("click", function () {
+//     userModal.classList.add("hideModal");
+//   });
+// };
