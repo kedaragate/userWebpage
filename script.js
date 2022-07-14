@@ -154,13 +154,14 @@ const userDetails = function () {
           console.log(data);
 
           console.log(userInfo);
-          createUserModal(data);
+          /*createUserModal(data);*/
         });
     });
 
     return this.id;
   });
 };
+/*
 const createUserModal = function (user) {
   const userModalHtml = `<div class="userModal">
 <button class="modalCloseBtn">X</button>
@@ -219,3 +220,4 @@ const createUserModal = function (user) {
 modalCloseBtn.addEventListener("click", function () {
   userModal.classList.add("hideModal");
 })
+*/
