@@ -217,7 +217,7 @@ const createUserModal = function (user) {
 //     userModal.classList.add("hideModal");
 //   });
 };
-const modalCloseBtn=document.querySelector(".modalButton")
+const modalCloseBtn=document.querySelector(".modalCloseBtn")
 modalCloseBtn.addEventListener("click", function () {
   userModal.classList.add("hideModal");
 })
