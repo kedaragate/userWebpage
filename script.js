@@ -163,7 +163,7 @@ const createUserModal = function (user) {
   console.log(usersDiv);
 };
 const modalCloseBtn = document.querySelector(".modalCloseBtn");
-const userModal = document.querySelector(".userModal");
+const userModal = document.getElementsByClassName("userModal");
 
 modalCloseBtn.addEventListener("click", function () {
   userModal.classList.add("hideModal");
