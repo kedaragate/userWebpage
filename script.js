@@ -165,6 +165,7 @@ const createUserModal = function (user) {
 const modalCloseBtn = document.querySelector(".modalCloseBtn");
 const userModal = document.getElementsByClassName("userModal");
 
-modalCloseBtn.addEventListener("click", function () {
+modalCloseBtn.addEventListener("click", function (e) {
   userModal.classList.add("hideModal");
+e.stopPropagation()
 });
