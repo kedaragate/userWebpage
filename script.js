@@ -141,7 +141,7 @@ userModal.classList.removeClass("hideModal");
 };
 
 const createUserModal = function (user) {
-  const userModalHtml = `<div class="userModal .hideModal">
+  const userModalHtml = `<div class="userModal hideModal">
 <button class="modalCloseBtn">X</button>
 
   
