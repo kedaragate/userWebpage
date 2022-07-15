@@ -132,6 +132,7 @@ const userDetails = function () {
         .then((data) => {
           console.log(data);
           createUserModal(data);
+userModal.classList.remove("hideModal");
         });
     });
   });
@@ -140,7 +141,7 @@ const userDetails = function () {
 };
 
 const createUserModal = function (user) {
-  const userModalHtml = `<div class="userModal">
+  const userModalHtml = `<div class="userModal hideModal">
 <button class="modalCloseBtn">X</button>
 
   
