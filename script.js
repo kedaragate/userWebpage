@@ -162,7 +162,7 @@ const createUserModal = function (user) {
   usersDiv.insertAdjacentHTML("beforeend", userModalHtml);
   console.log(usersDiv);
 };
-const modalCloseBtn = document.querySelector(".modalCloseBtn");
+const modalCloseBtn = document.querySelectorAll(".modalCloseBtn");
 const userModal = document.getElementsByClassName("userModal");
 //const hideModal=document.querySelector(".hideModal")
 modalCloseBtn.forEach(function (){
