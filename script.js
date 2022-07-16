@@ -166,6 +166,6 @@ const modalCloseBtn = document.querySelector(".modalCloseBtn");
 const userModal = document.getElementsByClassName("userModal");
 //const hideModal=document.querySelector(".hideModal")
 modalCloseBtn.addEventListener("click", function () {
-  
-userModal.setAttribute('style',"display:none")
+  userModal.forEach(function (){
+userModal.setAttribute('style',"display:none")})
 });
