@@ -82,7 +82,6 @@ const userDetails = function () {
       })
         .then((response) => response.json())
         .then((data) => {
-          console.log(data);
           createUserModal(data);
         });
     });
@@ -93,13 +92,13 @@ const userDetails = function () {
 
 const createUserModal = function (user) {
   const userModalHtml = `<div class="userModal">
-<button class="modalCloseBtn" >X</button> 
+<button class="modalCloseBtn" onclick="this.parentElement.remove()">X</button> 
 <div class="userDetails">
   <div class="userImg">
     <img src="${user.picture}" />
   </div>
   <div class="userPersonalInfo">
-    <p>${user.title} ${user.firstName} ${user.lastName}</p>
+    <p>Name:${user.title} ${user.firstName} ${user.lastName}</p>
     <p>Gender:${user.gender}</p>
     <p>Phone:${user.phone}</p>
     <p>Email:${user.email}</p>
@@ -111,22 +110,3 @@ const createUserModal = function (user) {
   usersDiv.insertAdjacentHTML("beforeend", userModalHtml);
   // closingModal();
 };
-
-// const closingModal = function () {
-//   const modalCloseBtn = document.querySelector(".modalCloseBtn");
-//   const userModal = document.querySelector(".userModal");
-//   console.log(userModal);
-
-//   modalCloseBtn.addEventListener("click", function () {
-//     userModal.style.display = "none";
-//   });
-// };
-
-const modalCloseBtn = document.querySelectorAll(".modalCloseBtn");
-const userModal = document.querySelectorAll(".userModal");
-
-modalCloseBtn.forEach((btn) => {
-  btn.addEventListener("click", function () {
-    userModal.setAttribute("style", "display:none");
-  });
-});
