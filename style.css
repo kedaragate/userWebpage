@@ -86,10 +86,11 @@
 }
 
 .userModal {
-/*  position: absolute;*/
+position: fixed
   background-color: white;
   /* border: 2px solid red; */
   border: 1px solid grey;
+top:0;
 
   width: 350px;
   height:450px ;
