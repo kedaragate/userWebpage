@@ -112,7 +112,7 @@ const createUserModal = function (user) {
 };
 const closeModal=function (){
 document.addEventListener("click",e=>{
-if (e.target.contains("modalCloseBtn")){
+if (e.target=="modalCloseBtn"){
 userModal.style.display="none";
 }
 })
