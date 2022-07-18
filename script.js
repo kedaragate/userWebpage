@@ -92,7 +92,7 @@ const userDetails = function () {
 
 const createUserModal = function (user) {
   const userModalHtml = `<div class="userModal">
-<button class="modalCloseBtn" onclick="this.parentElement.remove()">X</button> 
+<button class="modalCloseBtn">X</button> 
 <div class="userDetails">
   <div class="userImg">
     <img src="${user.picture}" />
@@ -108,5 +108,12 @@ const createUserModal = function (user) {
 </div>`;
 
   usersDiv.insertAdjacentHTML("beforeend", userModalHtml);
-  // closingModal();
+ 
 };
+const closeModal=function (){
+document.addEventListener("click",e=>{
+if (e.target.matches("modalCloseBtn"){
+userModal.style.display="none";
+}
+})
+}
