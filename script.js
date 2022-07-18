@@ -111,9 +111,9 @@ const createUserModal = function (user) {
  closeModal();
 };
 const closeModal=function (){
-document.addEventListener("click",(target)=>{
-if (target.classList.contains("modalCloseBtn")){
-target.parentElement.remove();
+document.addEventListener("click",(e)=>{
+if (e.target.classList.contains("modalCloseBtn")){
+e.target.parentElement.remove();
 }
 })
 }
