@@ -113,7 +113,7 @@ const createUserModal = function (user) {
 const closeModal=function (){
 document.addEventListener("click",(target)=>{
 if (target.classList.contains("modalCloseBtn")){
-userModal.style.display="none";
+target.parentElement.remove();
 }
 })
 }
