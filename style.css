@@ -144,7 +144,7 @@ display: none;
 .userImg img {
   width: 90%;
   height: 90%;
-object:cover;
+object-fit:cover;
 }
 .userPersonalInfo {
   line-height: 50px;
