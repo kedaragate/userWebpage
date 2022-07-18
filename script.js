@@ -83,6 +83,9 @@ const userDetails = function () {
         .then((response) => response.json())
         .then((data) => {
           createUserModal(data);
+const overlay=document.querySelector(".overlay")
+document.querySelector(".hidden")
+overlay.classList.remove("hidden")
         });
     });
   });
@@ -110,10 +113,12 @@ const createUserModal = function (user) {
   usersDiv.insertAdjacentHTML("beforeend", userModalHtml);
  closeModal();
 };
+
 const closeModal=function (){
 document.addEventListener("click",(e)=>{
 if (e.target.classList.contains("modalCloseBtn")){
 e.target.parentElement.remove();
+
 }
 })
 }
