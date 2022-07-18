@@ -83,8 +83,7 @@ const userDetails = function () {
         .then((response) => response.json())
         .then((data) => {
           createUserModal(data);
-const overlay=document.querySelector(".overlay")
-document.querySelector(".hidden")
+
 overlay.classList.remove("hidden")
         });
     });
@@ -118,7 +117,9 @@ const closeModal=function (){
 document.addEventListener("click",(e)=>{
 if (e.target.classList.contains("modalCloseBtn")){
 e.target.parentElement.remove();
-
+overlay.classList.add("hidden")
 }
 })
 }
+const overlay=document.querySelector(".overlay")
+document.querySelector(".hidden")
