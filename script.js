@@ -108,7 +108,7 @@ const createUserModal = function (user) {
 </div>`;
 
   usersDiv.insertAdjacentHTML("beforeend", userModalHtml);
- 
+ closeModal();
 };
 const closeModal=function (){
 document.addEventListener("click",e=>{
