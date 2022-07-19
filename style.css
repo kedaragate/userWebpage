@@ -134,13 +134,13 @@ display: none;
   
   margin: 10px 10px;
 
-  height: 90%;
+  
 }
 
 .userImg {
   
   display: flex;
-  
+  width:70%;
   height: 50%;
 }
 
