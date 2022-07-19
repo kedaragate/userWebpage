@@ -150,10 +150,7 @@ display: none;
 object-fit:cover;
 }
 .userPersonalInfo {
- display:flex;
-flex-direction: column;
-justify-content: space-between;
-align-items: center;
+ line-spacing:30px;
   
 }
 
