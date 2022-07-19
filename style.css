@@ -130,19 +130,18 @@ display: none;
   border: 1px solid grey;
 }
 
-/*.userDetails {
-  display: flex;
+.userDetails {
+  
   margin: 10px 10px;
 
   height: 90%;
 }
 
 .userImg {
-  width: 40%;
+  
   display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 100%;
+  
+  height: 50%;
 }
 
 .userImg img {
@@ -154,4 +153,4 @@ object-fit:cover;
   line-height: 50px;
   margin: 10px;
 }
-*/
+
