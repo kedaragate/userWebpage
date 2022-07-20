@@ -93,8 +93,7 @@ overlay.classList.remove("hidden")
 };
 
 const createUserModal = function (user) {
-if (e.target.classList.contains("modalCloseBtn")){
-e.target.parentElement.remove()};
+userModal.style.display=" none";
   const userModalHtml = `<div class="userModal">
 <button class="modalCloseBtn">X</button> 
 <div class="userDetails">
