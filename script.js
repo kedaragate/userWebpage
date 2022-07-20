@@ -95,6 +95,7 @@ overlay.classList.remove("hidden")
 const createUserModal = function (user) {
 userModal.classList.add("hidden");
   const userModalHtml = `<div class="userModal">
+userModal. classList.remove("hidden")
 <button class="modalCloseBtn">X</button> 
 <div class="userDetails">
   <div class="userImg">
