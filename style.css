@@ -4,6 +4,10 @@
   padding: 0;
   color: gray;
 }
+body {
+  background-color: rgb(214, 210, 210);
+  position: relative;
+}
 
 .cards {
   /* border: 2px solid green; */
@@ -24,11 +28,12 @@
   justify-content: space-between;
   align-items: center;
   /* border: 2px solid red; */
-  padding: 10px;
-  width: 180px;
-  height: 250px;
+  padding: 20px;
+  width: 250px;
+  height: 350px;
+  background-color: white;
 
-  border: 1px solid gray;
+  /* border: 1px solid gray; */
 }
 .card img {
   width: 90%;
@@ -86,33 +91,31 @@
 }
 
 .userModal {
-position: fixed;
+  position: fixed;
   background-color: white;
   /* border: 2px solid red; */
   border: 1px solid grey;
-top:0;
+  top: 0;
 
   width: 70%;
-  height:70%; 
-z-index: 2;
-display: flex;
-flex-direction: column;
+  height: 70%;
+  z-index: 2;
+  display: flex;
 }
 
 .overlay {
   position: absolute;
   top: 0;
   left: 0;
-width:100vw;
-height:100vh;
-  
- 
+  width: 100%;
+  height: 100%;
+
   background-color: rgba(0, 0, 0, 0.6);
   backdrop-filter: blur(3px);
   z-index: 1;
 }
-.hidden{
-display: none;
+.hidden {
+  display: none;
 }
 .modalCloseBtn {
   padding: 5px;
@@ -131,31 +134,25 @@ display: none;
 }
 
 .userDetails {
-  
   margin: 10px 10px;
-
-  
 }
 
 .userImg {
-  
   display: flex;
-  width:70%;
+  width: 70%;
   height: 50%;
-justify-content: center;
-align-items: center;
+  justify-content: center;
+  align-items: center;
 }
 
 .userImg img {
   width: 90%;
   height: 90%;
-object-fit:cover;
+  object-fit: cover;
 }
 .userPersonalInfo {
-display: flex;
-flex-direction: column;
-justify-content: center;
- line-height:30px;
- 
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  line-height: 30px;
 }
-

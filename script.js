@@ -84,7 +84,7 @@ const userDetails = function () {
         .then((data) => {
           createUserModal(data);
 
-overlay.classList.remove("hidden")
+          overlay.classList.remove("hidden");
         });
     });
   });
@@ -93,9 +93,8 @@ overlay.classList.remove("hidden")
 };
 
 const createUserModal = function (user) {
-userModal.classList.add("hidden");
   const userModalHtml = `<div class="userModal">
-userModal. classList.remove("hidden")
+
 <button class="modalCloseBtn">X</button> 
 <div class="userDetails">
   <div class="userImg">
@@ -112,17 +111,17 @@ userModal. classList.remove("hidden")
 </div>`;
 
   usersDiv.insertAdjacentHTML("beforeend", userModalHtml);
- closeModal();
+  closeModal();
 };
 
-const closeModal=function (){
-document.addEventListener("click",(e)=>{
-if (e.target.classList.contains("modalCloseBtn")){
-e.target.parentElement.remove();
-overlay.classList.add("hidden")
-}
-})
-}
-const overlay=document.querySelector(".overlay")
-document.querySelector(".hidden")
-card.appendChild("userModal")
+const closeModal = function () {
+  document.addEventListener("click", (e) => {
+    if (e.target.classList.contains("modalCloseBtn")) {
+      e.target.parentElement.remove();
+      overlay.classList.add("hidden");
+    }
+  });
+};
+const overlay = document.querySelector(".overlay");
+document.querySelector(".hidden");
+card.appendChild("userModal");
